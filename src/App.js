@@ -1,10 +1,10 @@
 import { Switch, Route, Redirect } from 'react-router-dom';
+import { useContext } from 'react';
 
 import Layout from './components/Layout/Layout';
 import UserProfile from './components/Profile/UserProfile';
 import AuthPage from './pages/AuthPage';
 import HomePage from './pages/HomePage';
-import { useContext } from 'react';
 import Authcontext from './Store/AuthContext';
 
 function App() {
@@ -26,7 +26,7 @@ function App() {
         </Route>
         )}
         <Route path='*'>
-          <Redirect path= '/' />
+          <Redirect to= '/' />
         </Route>
         
       </Switch>
